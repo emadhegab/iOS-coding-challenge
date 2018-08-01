@@ -11,6 +11,7 @@ import UIKit
 
 class ForecastPresenter: ForecastPresenterProtocol {
 
+
     weak private var view: ForecastViewProtocol?
     var interactor: ForecastInteractorProtocol?
 
@@ -19,4 +20,11 @@ class ForecastPresenter: ForecastPresenterProtocol {
         self.interactor = interactor
     }
 
+    func getForecast(for city: String) {
+        interactor?.getForecast(for: city, onComplete: { (forecast) in
+            print(forecast.current.condition.iconURL()?.absoluteURL ?? "")
+        }, onError: { (error) in
+            print(error)
+        })
+    }
 }

@@ -11,10 +11,11 @@ import UIKit
 
 class ForecastViewController: UIViewController, ForecastViewProtocol {
 
-	var presenter: ForecastPresenterProtocol?
+    var presenter: ForecastPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.getForecast(for: "Berlin")
     }
 
 }

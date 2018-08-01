@@ -19,9 +19,11 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
     @IBOutlet weak var tempratureLabel: UILabel!
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var speechResultLabel: UILabel!
+    @IBOutlet weak var locationNameLabel: UILabel!
 
     var presenter: ForecastPresenterProtocol?
     var city: String = ""
+    var tempSystem: TempSystem = .celsius
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -43,7 +45,7 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
 
     func toggleButton(isEnabled: Bool) {
         micButton.isEnabled = isEnabled
-        micButton.backgroundColor = isEnabled ? UIColor(red: 224 / 255, green: 116 / 255, blue: 45 / 255, alpha: 1) :  UIColor.lightGray
+        micButton.backgroundColor = isEnabled ? UIColor(red: 224 / 255, green: 166 / 255, blue: 35 / 255, alpha: 1) :  UIColor.lightGray
     }
 
     private func setupView() {
@@ -51,6 +53,7 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
         micButton.layer.cornerRadius = micButton.frame.width / 2
         micButton.clipsToBounds = true
         micButton.isEnabled = false
+        forecastContainer.isHidden = true
     }
 
     private func setupIcon(with url: URL?) {
@@ -64,14 +67,33 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
         }
     }
 
-    func setWeatherData(forecast: Forecast) {
-        let currentForecast = forecast.current
-        self.tempratureLabel.text = "\(currentForecast.tempC) °c"
-        self.conditionLabel.text = currentForecast.condition.text
-        setupIcon(with: currentForecast.condition.iconURL())
+    func setWeatherData() {
+        forecastContainer.isHidden = false
+        if let forecast = presenter?.forecast {
+            self.conditionLabel.text = forecast.current.condition.text
+            self.locationNameLabel.text = "\(forecast.location.name), \(forecast.location.country)"
+            setupTempratureTitle()
+            setupIcon(with: forecast.current.condition.iconURL())
+        }
     }
 
-    @IBAction func systemSegmentChanged(_ sender: Any) {
+    func setupTempratureTitle() {
+        if let currentForecast = presenter?.forecast?.current {
+            self.tempratureLabel.text = tempSystem == .celsius ? "\(currentForecast.tempC) °c" : "\(currentForecast.tempF) °F"
+        }
+    }
+
+    @IBAction func systemSegmentChanged(_ segment: UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            tempSystem = .celsius
+        case 1:
+            tempSystem = .fahrenheit
+
+        default:
+            tempSystem = .celsius
+        }
+        setupTempratureTitle()
     }
 
     @IBAction func micButtonPressed(_ sender: Any) {

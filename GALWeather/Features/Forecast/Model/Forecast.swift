@@ -9,9 +9,14 @@
 import Foundation
 
 struct Forecast: Decodable {
+    let location: Location
     let current: CurrentForecast
 }
 
+struct Location: Decodable {
+    let name: String
+    let country: String
+}
 
 struct CurrentForecast: Decodable {
     let tempC: Double
@@ -31,4 +36,10 @@ struct Condition: Decodable {
         let url = URL(string: validURLString) ?? nil
         return url
     }
+}
+
+
+enum TempSystem {
+    case celsius
+    case fahrenheit
 }

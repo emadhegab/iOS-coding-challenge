@@ -15,6 +15,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
     let kSeparatorWord: String = "in "
 
     weak private var view: ForecastViewProtocol?
+    var forecast: Forecast?
     var interactor: ForecastInteractorProtocol?
 
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
@@ -32,7 +33,8 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
     func getForecast(for city: String) {
         interactor?.getForecast(for: city, onComplete: { (forecast) in
             Queue.main.async { [weak self] in
-                self?.view?.setWeatherData(forecast: forecast)
+                self?.forecast = forecast
+                self?.view?.setWeatherData()
             }
         }, onError: { (error) in
             print(error)
@@ -86,6 +88,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
         }
     }
 
+
     fileprivate func record() {
 
         resetRecognitionTask()
@@ -96,32 +99,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
 
         let inputNode = audioEngine.inputNode
 
-        speechRecognizer?.recognitionTask(with: recognitionRequest!, resultHandler: { [weak self] (result, error) in
-            guard let `self` = self else { return }
-            var isFinal = false
-
-            if result != nil {
-                if let resultString = result?.bestTranscription.formattedString {
-                    self.view?.setTextResult(resultString)
-
-                    if let range = resultString.range(of: self.kSeparatorWord) {
-                        let cityName = resultString[range.upperBound...]
-                        self.view?.city = String(cityName)
-                    }
-                }
-                isFinal = (result?.isFinal)!
-            }
-
-            if error != nil || isFinal {
-                self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
-
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
-
-                self.view?.toggleButton(isEnabled: true)
-            }
-        })
+        recognitionTask(inputNode)
 
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
@@ -166,6 +144,44 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
         }
     }
 
+    fileprivate func getCityName(_ resultString: String) {
+        if let range = resultString.range(of: self.kSeparatorWord) {
+            let cityName = resultString[range.upperBound...]
+            self.view?.city = String(cityName)
+        }
+    }
+
+    fileprivate func handleRecordingStop(_ error: Error?, _ isFinal: Bool, _ inputNode: AVAudioInputNode) {
+        if error != nil || isFinal {
+            self.audioEngine.stop()
+            inputNode.removeTap(onBus: 0)
+
+            self.recognitionRequest = nil
+            self.recognitionTask = nil
+
+            self.view?.toggleButton(isEnabled: true)
+        }
+    }
+
+    fileprivate func recognitionTask(_ inputNode: AVAudioInputNode) {
+
+        speechRecognizer?.recognitionTask(with: recognitionRequest!, resultHandler: { [weak self] (result, error) in
+
+            guard let `self` = self else { return }
+            var isFinal = false
+
+            if result != nil {
+                if let resultString = result?.bestTranscription.formattedString {
+                    self.view?.setTextResult(resultString)
+
+                    self.getCityName(resultString)
+                }
+                isFinal = (result?.isFinal)!
+            }
+
+            self.handleRecordingStop(error, isFinal, inputNode)
+        })
+    }
 
 }
 
@@ -176,8 +192,3 @@ extension ForecastPresenter: SFSpeechRecognizerDelegate {
             view?.toggleButton(isEnabled: available)
     }
 }
-
-
-
-
-

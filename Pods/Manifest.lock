@@ -1,0 +1,16 @@
+PODS:
+  - MHNetwork (1.0.1)
+
+DEPENDENCIES:
+  - MHNetwork
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MHNetwork
+
+SPEC CHECKSUMS:
+  MHNetwork: 816f23792c292d640069db443e2aa9614b9a0f69
+
+PODFILE CHECKSUM: 93f0bd977f1c9e0722445599ceebc34dbcbee25d
+
+COCOAPODS: 1.5.3

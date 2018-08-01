@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C76DB2F855D4E77FAE40497 /* Pods_GALWeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F179E6B64338CC08E755FC6 /* Pods_GALWeatherUITests.framework */; };
+		86B237F332BE031BC059DF1F /* Pods_GALWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74B360370FA47E2BEBF7201 /* Pods_GALWeatherTests.framework */; };
+		AB116674F4AED4BEA570647D /* Pods_GALWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729DAA42B97E2A9125D5A8EE /* Pods_GALWeather.framework */; };
+		FDC7B1B12111EAA1005FF0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */; };
+		FDC7B1B82111EAA3005FF0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */; };
+		FDC7B1BB2111EAA3005FF0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */; };
+		FDC7B1C62111EAA4005FF0D8 /* GALWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */; };
+		FDC7B1D12111EAA4005FF0D8 /* GALWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */; };
+		FDC7B1E62111EB6F005FF0D8 /* ForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */; };
+		FDC7B1E72111EB6F005FF0D8 /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */; };
+		FDC7B1E82111EB6F005FF0D8 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */; };
+		FDC7B1E92111EB6F005FF0D8 /* ForecastProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E32111EB6F005FF0D8 /* ForecastProtocols.swift */; };
+		FDC7B1EA2111EB6F005FF0D8 /* ForecastInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E42111EB6F005FF0D8 /* ForecastInteractor.swift */; };
+		FDC7B1F02111EC61005FF0D8 /* Forecast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1EF2111EC61005FF0D8 /* Forecast.storyboard */; };
+		FDC7B1F42111F247005FF0D8 /* ForecastRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */; };
+		FDC7B1F72111F3CB005FF0D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F62111F3CB005FF0D8 /* Constants.swift */; };
+		FDC7B1FA2111F45A005FF0D8 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDC7B1C22111EAA4005FF0D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC7B1A52111EAA1005FF0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC7B1AC2111EAA1005FF0D8;
+			remoteInfo = GALWeather;
+		};
+		FDC7B1CD2111EAA4005FF0D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC7B1A52111EAA1005FF0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC7B1AC2111EAA1005FF0D8;
+			remoteInfo = GALWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		137E92C0D0B490F085D41916 /* Pods-GALWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherTests/Pods-GALWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A23EE1C722C750C5F50D856 /* Pods-GALWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeather/Pods-GALWeather.release.xcconfig"; sourceTree = "<group>"; };
+		5F179E6B64338CC08E755FC6 /* Pods_GALWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GALWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E080062D548898A7D39E38 /* Pods-GALWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeather/Pods-GALWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		729DAA42B97E2A9125D5A8EE /* Pods_GALWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GALWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A27E11E7E9DD5EEE8E05F4 /* Pods-GALWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherTests/Pods-GALWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B74B360370FA47E2BEBF7201 /* Pods_GALWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GALWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherUITests/Pods-GALWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherUITests/Pods-GALWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FDC7B1AD2111EAA1005FF0D8 /* GALWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GALWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDC7B1BA2111EAA3005FF0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDC7B1BC2111EAA3005FF0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GALWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALWeatherTests.swift; sourceTree = "<group>"; };
+		FDC7B1C72111EAA4005FF0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GALWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALWeatherUITests.swift; sourceTree = "<group>"; };
+		FDC7B1D22111EAA4005FF0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastPresenter.swift; sourceTree = "<group>"; };
+		FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
+		FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		FDC7B1E32111EB6F005FF0D8 /* ForecastProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProtocols.swift; sourceTree = "<group>"; };
+		FDC7B1E42111EB6F005FF0D8 /* ForecastInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastInteractor.swift; sourceTree = "<group>"; };
+		FDC7B1EF2111EC61005FF0D8 /* Forecast.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forecast.storyboard; sourceTree = "<group>"; };
+		FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRequests.swift; sourceTree = "<group>"; };
+		FDC7B1F62111F3CB005FF0D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDC7B1AA2111EAA1005FF0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB116674F4AED4BEA570647D /* Pods_GALWeather.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1BE2111EAA4005FF0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86B237F332BE031BC059DF1F /* Pods_GALWeatherTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1C92111EAA4005FF0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C76DB2F855D4E77FAE40497 /* Pods_GALWeatherUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98850AD15419C97E3DCFD80D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				729DAA42B97E2A9125D5A8EE /* Pods_GALWeather.framework */,
+				B74B360370FA47E2BEBF7201 /* Pods_GALWeatherTests.framework */,
+				5F179E6B64338CC08E755FC6 /* Pods_GALWeatherUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3375A89C1819856A384FB5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62E080062D548898A7D39E38 /* Pods-GALWeather.debug.xcconfig */,
+				3A23EE1C722C750C5F50D856 /* Pods-GALWeather.release.xcconfig */,
+				76A27E11E7E9DD5EEE8E05F4 /* Pods-GALWeatherTests.debug.xcconfig */,
+				137E92C0D0B490F085D41916 /* Pods-GALWeatherTests.release.xcconfig */,
+				BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */,
+				E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDC7B1A42111EAA1005FF0D8 = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1AF2111EAA1005FF0D8 /* GALWeather */,
+				FDC7B1C42111EAA4005FF0D8 /* GALWeatherTests */,
+				FDC7B1CF2111EAA4005FF0D8 /* GALWeatherUITests */,
+				FDC7B1AE2111EAA1005FF0D8 /* Products */,
+				F3375A89C1819856A384FB5A /* Pods */,
+				98850AD15419C97E3DCFD80D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDC7B1AE2111EAA1005FF0D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1AD2111EAA1005FF0D8 /* GALWeather.app */,
+				FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */,
+				FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDC7B1AF2111EAA1005FF0D8 /* GALWeather */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */,
+				FDC7B1DE2111EAC5005FF0D8 /* Features */,
+				FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */,
+				FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */,
+				FDC7B1BC2111EAA3005FF0D8 /* Info.plist */,
+			);
+			path = GALWeather;
+			sourceTree = "<group>";
+		};
+		FDC7B1C42111EAA4005FF0D8 /* GALWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */,
+				FDC7B1C72111EAA4005FF0D8 /* Info.plist */,
+			);
+			path = GALWeatherTests;
+			sourceTree = "<group>";
+		};
+		FDC7B1CF2111EAA4005FF0D8 /* GALWeatherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */,
+				FDC7B1D22111EAA4005FF0D8 /* Info.plist */,
+			);
+			path = GALWeatherUITests;
+			sourceTree = "<group>";
+		};
+		FDC7B1DE2111EAC5005FF0D8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1F52111F3C0005FF0D8 /* Helpers */,
+				FDC7B1EC2111EBA2005FF0D8 /* Managers */,
+				FDC7B1DF2111EAD4005FF0D8 /* Forecast */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FDC7B1DF2111EAD4005FF0D8 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1F22111F234005FF0D8 /* Requests */,
+				FDC7B1E42111EB6F005FF0D8 /* ForecastInteractor.swift */,
+				FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */,
+				FDC7B1E32111EB6F005FF0D8 /* ForecastProtocols.swift */,
+				FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */,
+				FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */,
+				FDC7B1EF2111EC61005FF0D8 /* Forecast.storyboard */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		FDC7B1EC2111EBA2005FF0D8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FDC7B1F22111F234005FF0D8 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FDC7B1F52111F3C0005FF0D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1F82111F44E005FF0D8 /* Extensions */,
+				FDC7B1F62111F3CB005FF0D8 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDC7B1F82111F44E005FF0D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDC7B1AC2111EAA1005FF0D8 /* GALWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC7B1D52111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeather" */;
+			buildPhases = (
+				45AA1A97677DE8E5FF214197 /* [CP] Check Pods Manifest.lock */,
+				FDC7B1A92111EAA1005FF0D8 /* Sources */,
+				FDC7B1AA2111EAA1005FF0D8 /* Frameworks */,
+				FDC7B1AB2111EAA1005FF0D8 /* Resources */,
+				605FBB65EF875C505C373B33 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GALWeather;
+			productName = GALWeather;
+			productReference = FDC7B1AD2111EAA1005FF0D8 /* GALWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDC7B1C02111EAA4005FF0D8 /* GALWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC7B1D82111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherTests" */;
+			buildPhases = (
+				2BF19AA034C65834DC35C336 /* [CP] Check Pods Manifest.lock */,
+				FDC7B1BD2111EAA4005FF0D8 /* Sources */,
+				FDC7B1BE2111EAA4005FF0D8 /* Frameworks */,
+				FDC7B1BF2111EAA4005FF0D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDC7B1C32111EAA4005FF0D8 /* PBXTargetDependency */,
+			);
+			name = GALWeatherTests;
+			productName = GALWeatherTests;
+			productReference = FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDC7B1CB2111EAA4005FF0D8 /* GALWeatherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC7B1DB2111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherUITests" */;
+			buildPhases = (
+				87B22955B719F8BBA7D2A701 /* [CP] Check Pods Manifest.lock */,
+				FDC7B1C82111EAA4005FF0D8 /* Sources */,
+				FDC7B1C92111EAA4005FF0D8 /* Frameworks */,
+				FDC7B1CA2111EAA4005FF0D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDC7B1CE2111EAA4005FF0D8 /* PBXTargetDependency */,
+			);
+			name = GALWeatherUITests;
+			productName = GALWeatherUITests;
+			productReference = FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDC7B1A52111EAA1005FF0D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "German Autolabs GmbH";
+				TargetAttributes = {
+					FDC7B1AC2111EAA1005FF0D8 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					FDC7B1C02111EAA4005FF0D8 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = FDC7B1AC2111EAA1005FF0D8;
+					};
+					FDC7B1CB2111EAA4005FF0D8 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = FDC7B1AC2111EAA1005FF0D8;
+					};
+				};
+			};
+			buildConfigurationList = FDC7B1A82111EAA1005FF0D8 /* Build configuration list for PBXProject "GALWeather" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDC7B1A42111EAA1005FF0D8;
+			productRefGroup = FDC7B1AE2111EAA1005FF0D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDC7B1AC2111EAA1005FF0D8 /* GALWeather */,
+				FDC7B1C02111EAA4005FF0D8 /* GALWeatherTests */,
+				FDC7B1CB2111EAA4005FF0D8 /* GALWeatherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDC7B1AB2111EAA1005FF0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7B1BB2111EAA3005FF0D8 /* LaunchScreen.storyboard in Resources */,
+				FDC7B1F02111EC61005FF0D8 /* Forecast.storyboard in Resources */,
+				FDC7B1B82111EAA3005FF0D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1BF2111EAA4005FF0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1CA2111EAA4005FF0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BF19AA034C65834DC35C336 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GALWeatherTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45AA1A97677DE8E5FF214197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GALWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		605FBB65EF875C505C373B33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GALWeather/Pods-GALWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MHNetwork/MHNetwork.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHNetwork.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GALWeather/Pods-GALWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87B22955B719F8BBA7D2A701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GALWeatherUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDC7B1A92111EAA1005FF0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7B1B12111EAA1005FF0D8 /* AppDelegate.swift in Sources */,
+				FDC7B1FA2111F45A005FF0D8 /* Bundle+Extension.swift in Sources */,
+				FDC7B1EA2111EB6F005FF0D8 /* ForecastInteractor.swift in Sources */,
+				FDC7B1E92111EB6F005FF0D8 /* ForecastProtocols.swift in Sources */,
+				FDC7B1E82111EB6F005FF0D8 /* ForecastViewController.swift in Sources */,
+				FDC7B1E62111EB6F005FF0D8 /* ForecastPresenter.swift in Sources */,
+				FDC7B1F42111F247005FF0D8 /* ForecastRequests.swift in Sources */,
+				FDC7B1E72111EB6F005FF0D8 /* ForecastRouter.swift in Sources */,
+				FDC7B1F72111F3CB005FF0D8 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1BD2111EAA4005FF0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7B1C62111EAA4005FF0D8 /* GALWeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC7B1C82111EAA4005FF0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7B1D12111EAA4005FF0D8 /* GALWeatherUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDC7B1C32111EAA4005FF0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC7B1AC2111EAA1005FF0D8 /* GALWeather */;
+			targetProxy = FDC7B1C22111EAA4005FF0D8 /* PBXContainerItemProxy */;
+		};
+		FDC7B1CE2111EAA4005FF0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC7B1AC2111EAA1005FF0D8 /* GALWeather */;
+			targetProxy = FDC7B1CD2111EAA4005FF0D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC7B1BA2111EAA3005FF0D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDC7B1D32111EAA4005FF0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDC7B1D42111EAA4005FF0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDC7B1D62111EAA4005FF0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E080062D548898A7D39E38 /* Pods-GALWeather.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.apixu.com/v1";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDC7B1D72111EAA4005FF0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A23EE1C722C750C5F50D856 /* Pods-GALWeather.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.apixu.com/v1";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDC7B1D92111EAA4005FF0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76A27E11E7E9DD5EEE8E05F4 /* Pods-GALWeatherTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GALWeather.app/GALWeather";
+			};
+			name = Debug;
+		};
+		FDC7B1DA2111EAA4005FF0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 137E92C0D0B490F085D41916 /* Pods-GALWeatherTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GALWeather.app/GALWeather";
+			};
+			name = Release;
+		};
+		FDC7B1DC2111EAA4005FF0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GALWeather;
+			};
+			name = Debug;
+		};
+		FDC7B1DD2111EAA4005FF0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GALWeather;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDC7B1A82111EAA1005FF0D8 /* Build configuration list for PBXProject "GALWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7B1D32111EAA4005FF0D8 /* Debug */,
+				FDC7B1D42111EAA4005FF0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC7B1D52111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7B1D62111EAA4005FF0D8 /* Debug */,
+				FDC7B1D72111EAA4005FF0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC7B1D82111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7B1D92111EAA4005FF0D8 /* Debug */,
+				FDC7B1DA2111EAA4005FF0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC7B1DB2111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7B1DC2111EAA4005FF0D8 /* Debug */,
+				FDC7B1DD2111EAA4005FF0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDC7B1A52111EAA1005FF0D8 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_GALWeatherTests {
+  umbrella header "Pods-GALWeatherTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,6 +13,10 @@ import Speech
 class ForecastViewController: UIViewController, ForecastViewProtocol {
 
 
+    @IBOutlet weak var forecastContainer: UIView!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var tempratureIconImage: UIImageView!
+    @IBOutlet weak var tempratureLabel: UILabel!
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var speechResultLabel: UILabel!
 
@@ -46,12 +50,24 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
         self.navigationController?.isNavigationBarHidden = true
         micButton.layer.cornerRadius = micButton.frame.width / 2
         micButton.clipsToBounds = true
-
         micButton.isEnabled = false
     }
 
+    private func setupIcon(with url: URL?) {
+        guard let url = url else { return }
+        if let data = try? Data(contentsOf: url) {
+            self.tempratureIconImage.image = UIImage(data: data)
+        }
+    }
+
     func setWeatherData(forecast: Forecast) {
-        
+        let currentForecast = forecast.current
+        self.tempratureLabel.text = "\(currentForecast.tempC) °c"
+        self.conditionLabel.text = currentForecast.condition.text
+        setupIcon(with: currentForecast.condition.iconURL())
+    }
+
+    @IBAction func systemSegmentChanged(_ sender: Any) {
     }
 
     @IBAction func micButtonPressed(_ sender: Any) {

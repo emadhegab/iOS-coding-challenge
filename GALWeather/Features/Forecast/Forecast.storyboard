@@ -45,6 +45,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8p-go-hXO">
+                                <rect key="frame" x="15" y="423.5" width="345" height="223.5"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MYm-qj-tsj">
+                                        <rect key="frame" x="72.5" y="8" width="200" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Ugc-cb-hb6"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="C"/>
+                                            <segment title="F"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="systemSegmentChanged:" destination="bKC-m0-lgQ" eventType="valueChanged" id="3iQ-ej-I2l"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuV-f0-EYK">
+                                        <rect key="frame" x="135.5" y="66" width="74" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-dL-xWz">
+                                        <rect key="frame" x="148" y="126" width="49.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YMj-Iy-6wb">
+                                        <rect key="frame" x="85" y="113" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="vL8-7e-f5h"/>
+                                            <constraint firstAttribute="height" constant="50" id="xGY-CO-zlx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Jvu-dL-xWz" firstAttribute="centerY" secondItem="YMj-Iy-6wb" secondAttribute="centerY" id="62D-8r-6be"/>
+                                    <constraint firstItem="HuV-f0-EYK" firstAttribute="centerX" secondItem="v8p-go-hXO" secondAttribute="centerX" id="Fxp-Z6-1A7"/>
+                                    <constraint firstItem="Jvu-dL-xWz" firstAttribute="leading" secondItem="YMj-Iy-6wb" secondAttribute="trailing" constant="13" id="Hmm-Vh-Kuj"/>
+                                    <constraint firstItem="Jvu-dL-xWz" firstAttribute="top" secondItem="HuV-f0-EYK" secondAttribute="bottom" constant="25" id="NKo-Pe-8Sc"/>
+                                    <constraint firstItem="MYm-qj-tsj" firstAttribute="top" secondItem="v8p-go-hXO" secondAttribute="top" constant="8" id="Ruv-ak-ts9"/>
+                                    <constraint firstItem="HuV-f0-EYK" firstAttribute="top" secondItem="MYm-qj-tsj" secondAttribute="bottom" constant="30" id="gnq-72-5Sj"/>
+                                    <constraint firstItem="MYm-qj-tsj" firstAttribute="centerX" secondItem="v8p-go-hXO" secondAttribute="centerX" id="sC6-6K-Gqf"/>
+                                    <constraint firstItem="Jvu-dL-xWz" firstAttribute="centerX" secondItem="HuV-f0-EYK" secondAttribute="centerX" id="zB7-hB-OiX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -53,14 +101,22 @@
                             <constraint firstItem="rlr-pK-884" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Hm6-xv-r4o"/>
                             <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerY" secondItem="Wdr-k2-WpM" secondAttribute="centerY" id="JAe-ix-eOX"/>
                             <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Kxx-lI-P4R"/>
+                            <constraint firstItem="v8p-go-hXO" firstAttribute="top" secondItem="TCQ-Xr-4Ob" secondAttribute="bottom" constant="20" id="QZR-1k-sEh"/>
+                            <constraint firstItem="TDA-x2-POr" firstAttribute="bottom" secondItem="v8p-go-hXO" secondAttribute="bottom" constant="20" id="Ud0-Ci-Wqa"/>
                             <constraint firstItem="3q1-x5-64N" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="YAc-VL-S62"/>
+                            <constraint firstItem="v8p-go-hXO" firstAttribute="leading" secondItem="TDA-x2-POr" secondAttribute="leading" constant="15" id="dpg-3P-flc"/>
+                            <constraint firstItem="TDA-x2-POr" firstAttribute="trailing" secondItem="v8p-go-hXO" secondAttribute="trailing" constant="15" id="ygz-Lj-s3I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDA-x2-POr"/>
                     </view>
                     <navigationItem key="navigationItem" id="hDL-kr-v8x"/>
                     <connections>
+                        <outlet property="conditionLabel" destination="Jvu-dL-xWz" id="0zG-JS-tio"/>
+                        <outlet property="forecastContainer" destination="v8p-go-hXO" id="XDf-uB-Wzp"/>
                         <outlet property="micButton" destination="TCQ-Xr-4Ob" id="eFG-X9-nHc"/>
                         <outlet property="speechResultLabel" destination="3q1-x5-64N" id="ouh-ir-QPP"/>
+                        <outlet property="tempratureIconImage" destination="YMj-Iy-6wb" id="KCM-zL-YjT"/>
+                        <outlet property="tempratureLabel" destination="HuV-f0-EYK" id="fhb-hv-FFz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG6-zZ-D70" userLabel="First Responder" sceneMemberID="firstResponder"/>

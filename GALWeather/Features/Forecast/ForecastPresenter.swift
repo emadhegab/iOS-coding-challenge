@@ -27,15 +27,17 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
         self.interactor = interactor
         speechRecognizer?.delegate = self
     }
-
+    //MARK: calling service -
     func getForecast(for city: String) {
-        interactor?.getForecast(for: city, onComplete: { (forecast) in
-            print(forecast.current.condition.iconURL()?.absoluteURL ?? "")
+        interactor?.getForecast(for: city, onComplete: { [weak self] (forecast) in
+            self?.view?.setWeatherData(forecast: forecast)
         }, onError: { (error) in
             print(error)
         })
     }
 
+
+    //MARK: Recording -
     func speechRequestAuthorization() {
 
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
@@ -130,6 +132,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             print("audioEngine couldn't start because of an error.")
         }
     }
+
     fileprivate func audioSessionCreating() {
         let audioSession = AVAudioSession.sharedInstance()
         do {

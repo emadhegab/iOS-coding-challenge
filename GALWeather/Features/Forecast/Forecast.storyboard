@@ -39,19 +39,28 @@
                                     <action selector="micButtonPressed:" destination="bKC-m0-lgQ" eventType="touchUpInside" id="7qi-N3-uae"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3q1-x5-64N">
+                                <rect key="frame" x="167" y="147" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3q1-x5-64N" firstAttribute="top" secondItem="rlr-pK-884" secondAttribute="bottom" constant="38" id="Dp1-YH-W2T"/>
                             <constraint firstItem="rlr-pK-884" firstAttribute="top" secondItem="TDA-x2-POr" secondAttribute="top" constant="60" id="GFi-S7-GE2"/>
                             <constraint firstItem="rlr-pK-884" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Hm6-xv-r4o"/>
                             <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerY" secondItem="Wdr-k2-WpM" secondAttribute="centerY" id="JAe-ix-eOX"/>
                             <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Kxx-lI-P4R"/>
+                            <constraint firstItem="3q1-x5-64N" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="YAc-VL-S62"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDA-x2-POr"/>
                     </view>
                     <navigationItem key="navigationItem" id="hDL-kr-v8x"/>
                     <connections>
                         <outlet property="micButton" destination="TCQ-Xr-4Ob" id="eFG-X9-nHc"/>
+                        <outlet property="speechResultLabel" destination="3q1-x5-64N" id="ouh-ir-QPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG6-zZ-D70" userLabel="First Responder" sceneMemberID="firstResponder"/>

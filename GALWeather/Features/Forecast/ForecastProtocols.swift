@@ -7,17 +7,18 @@
 //
 
 
-import Foundation
+import MHNetwork
  
 //MARK: Presenter -
 protocol ForecastPresenterProtocol: class {
-
+    func getForecast(for city: String)
 }
 
 //MARK: Interactor -
 protocol ForecastInteractorProtocol: class {
 
-  var presenter: ForecastPresenterProtocol?  { get set }
+    var presenter: ForecastPresenterProtocol?  { get set }
+    func getForecast(for city: String, onComplete: @escaping (Forecast) -> Void, onError: @escaping (ErrorItem) -> Void)
 }
 
 //MARK: View -

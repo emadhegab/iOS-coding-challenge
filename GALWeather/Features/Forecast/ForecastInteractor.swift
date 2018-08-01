@@ -7,10 +7,17 @@
 //
 
 
-import UIKit
+import MHNetwork
 
 class ForecastInteractor: ForecastInteractorProtocol {
 
     weak var presenter: ForecastPresenterProtocol?
-    
+
+    func getForecast(for city: String, onComplete: @escaping (Forecast) -> Void, onError: @escaping (ErrorItem) -> Void) {
+
+        let environment = Environment(host: Bundle.main.apiBaseURL)
+        let networkDispatcher = NetworkDispatcher(environment: environment, session: URLSession(configuration: .default))
+        let forecastTask = ForecastTask<Forecast>(city: city)
+        forecastTask.exeute(in: networkDispatcher, completed: onComplete, onError: onError)
+    }
 }

@@ -14,8 +14,7 @@ class ForecastRouter {
     weak var viewController: UIViewController?
     
     static func createModule() -> UIViewController {
-        // Change to get view from storyboard if not using progammatic UI
-        let view = ForecastViewController(nibName: nil, bundle: nil)
+        let view = UIStoryboard(name: "Forecast", bundle: nil).instantiateInitialViewController() as! ForecastViewController
         let interactor = ForecastInteractor()
         let router = ForecastRouter()
         let presenter = ForecastPresenter(interface: view, interactor: interactor)
@@ -25,5 +24,10 @@ class ForecastRouter {
         router.viewController = view
         
         return view
+    }
+
+    static func route(from: UIViewController, animated: Bool) {
+        let forecastVC = createModule()
+        from.navigationController?.pushViewController(forecastVC, animated: animated)
     }
 }

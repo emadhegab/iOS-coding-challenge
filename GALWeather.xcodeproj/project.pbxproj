@@ -24,6 +24,10 @@
 		FDC7B1F42111F247005FF0D8 /* ForecastRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */; };
 		FDC7B1F72111F3CB005FF0D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F62111F3CB005FF0D8 /* Constants.swift */; };
 		FDC7B1FA2111F45A005FF0D8 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */; };
+		FDC7B1FC2111F73F005FF0D8 /* ForecastTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1FB2111F73F005FF0D8 /* ForecastTask.swift */; };
+		FDC7B1FF2111F905005FF0D8 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1FE2111F905005FF0D8 /* Forecast.swift */; };
+		FDC7B2012111FCF4005FF0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B2002111FCF4005FF0D8 /* Main.storyboard */; };
+		FDC7B2042111FD2B005FF0D8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B2032111FD2B005FF0D8 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRequests.swift; sourceTree = "<group>"; };
 		FDC7B1F62111F3CB005FF0D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		FDC7B1FB2111F73F005FF0D8 /* ForecastTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTask.swift; sourceTree = "<group>"; };
+		FDC7B1FE2111F905005FF0D8 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		FDC7B2002111FCF4005FF0D8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FDC7B2032111FD2B005FF0D8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 				FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */,
 				FDC7B1DE2111EAC5005FF0D8 /* Features */,
 				FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */,
+				FDC7B2002111FCF4005FF0D8 /* Main.storyboard */,
 				FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */,
 				FDC7B1BC2111EAA3005FF0D8 /* Info.plist */,
 			);
@@ -182,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC7B1F52111F3C0005FF0D8 /* Helpers */,
+				FDC7B2022111FD0F005FF0D8 /* Bases */,
 				FDC7B1EC2111EBA2005FF0D8 /* Managers */,
 				FDC7B1DF2111EAD4005FF0D8 /* Forecast */,
 			);
@@ -191,11 +201,12 @@
 		FDC7B1DF2111EAD4005FF0D8 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				FDC7B1FD2111F8F9005FF0D8 /* Model */,
 				FDC7B1F22111F234005FF0D8 /* Requests */,
-				FDC7B1E42111EB6F005FF0D8 /* ForecastInteractor.swift */,
-				FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */,
 				FDC7B1E32111EB6F005FF0D8 /* ForecastProtocols.swift */,
 				FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */,
+				FDC7B1E42111EB6F005FF0D8 /* ForecastInteractor.swift */,
+				FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */,
 				FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */,
 				FDC7B1EF2111EC61005FF0D8 /* Forecast.storyboard */,
 			);
@@ -213,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC7B1F32111F247005FF0D8 /* ForecastRequests.swift */,
+				FDC7B1FB2111F73F005FF0D8 /* ForecastTask.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -232,6 +244,22 @@
 				FDC7B1F92111F45A005FF0D8 /* Bundle+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC7B1FD2111F8F9005FF0D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B1FE2111F905005FF0D8 /* Forecast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDC7B2022111FD0F005FF0D8 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				FDC7B2032111FD2B005FF0D8 /* RootViewController.swift */,
+			);
+			path = Bases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +373,7 @@
 				FDC7B1BB2111EAA3005FF0D8 /* LaunchScreen.storyboard in Resources */,
 				FDC7B1F02111EC61005FF0D8 /* Forecast.storyboard in Resources */,
 				FDC7B1B82111EAA3005FF0D8 /* Assets.xcassets in Resources */,
+				FDC7B2012111FCF4005FF0D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,12 +475,15 @@
 			files = (
 				FDC7B1B12111EAA1005FF0D8 /* AppDelegate.swift in Sources */,
 				FDC7B1FA2111F45A005FF0D8 /* Bundle+Extension.swift in Sources */,
+				FDC7B2042111FD2B005FF0D8 /* RootViewController.swift in Sources */,
 				FDC7B1EA2111EB6F005FF0D8 /* ForecastInteractor.swift in Sources */,
 				FDC7B1E92111EB6F005FF0D8 /* ForecastProtocols.swift in Sources */,
 				FDC7B1E82111EB6F005FF0D8 /* ForecastViewController.swift in Sources */,
 				FDC7B1E62111EB6F005FF0D8 /* ForecastPresenter.swift in Sources */,
 				FDC7B1F42111F247005FF0D8 /* ForecastRequests.swift in Sources */,
+				FDC7B1FC2111F73F005FF0D8 /* ForecastTask.swift in Sources */,
 				FDC7B1E72111EB6F005FF0D8 /* ForecastRouter.swift in Sources */,
+				FDC7B1FF2111F905005FF0D8 /* Forecast.swift in Sources */,
 				FDC7B1F72111F3CB005FF0D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

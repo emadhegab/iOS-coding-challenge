@@ -128,13 +128,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A5CE299F21121F4200DE9030 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		F3375A89C1819856A384FB5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +232,6 @@
 		FDC7B1F52111F3C0005FF0D8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A5CE299F21121F4200DE9030 /* Util */,
 				FDC7B1F82111F44E005FF0D8 /* Extensions */,
 				FDC7B1F62111F3CB005FF0D8 /* Constants.swift */,
 			);

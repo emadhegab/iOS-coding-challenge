@@ -21,6 +21,7 @@ class ForecastPresenter: ForecastPresenterProtocol {
     init(interface: ForecastViewProtocol, interactor: ForecastInteractorProtocol?) {
         self.view = interface
         self.interactor = interactor
+        speechRecognizer?.delegate = self
     }
 
     func getForecast(for city: String) {
@@ -33,7 +34,7 @@ class ForecastPresenter: ForecastPresenterProtocol {
 
     func speechRequestAuthorization() {
 
-        SFSpeechRecognizer.requestAuthorization { [weak self] (authStatus) in
+        SFSpeechRecognizer.requestAuthorization { (authStatus) in
 
             var isButtonEnabled = false
 
@@ -54,7 +55,9 @@ class ForecastPresenter: ForecastPresenterProtocol {
                 print("Speech recognition not yet authorized")
             }
 
-            self?.view?.toggleButton(isEnabled: isButtonEnabled)
+            OperationQueue.main.addOperation() { [weak self] in
+                self?.view?.toggleButton(isEnabled: isButtonEnabled)
+            }
         }
     }
 

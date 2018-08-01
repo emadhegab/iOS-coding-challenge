@@ -26,9 +26,11 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
 
     func toggleButton(isEnabled: Bool) {
         micButton.isEnabled = isEnabled
+        micButton.backgroundColor = isEnabled ? UIColor(red: 224 / 255, green: 116 / 255, blue: 45 / 255, alpha: 1) :  UIColor.lightGray
     }
 
     private func setupView() {
+        self.navigationController?.isNavigationBarHidden = true
         micButton.layer.cornerRadius = micButton.frame.width / 2
         micButton.clipsToBounds = true
 

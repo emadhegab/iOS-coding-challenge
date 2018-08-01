@@ -12,6 +12,7 @@ import Speech
 
 class ForecastPresenter: NSObject, ForecastPresenterProtocol {
 
+    let kSeparatorWord: String = "in "
 
     weak private var view: ForecastViewProtocol?
     var interactor: ForecastInteractorProtocol?
@@ -29,8 +30,10 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
     }
     //MARK: calling service -
     func getForecast(for city: String) {
-        interactor?.getForecast(for: city, onComplete: { [weak self] (forecast) in
-            self?.view?.setWeatherData(forecast: forecast)
+        interactor?.getForecast(for: city, onComplete: { (forecast) in
+            Queue.main.async { [weak self] in
+                self?.view?.setWeatherData(forecast: forecast)
+            }
         }, onError: { (error) in
             print(error)
         })
@@ -61,7 +64,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
                 print("Speech recognition not yet authorized")
             }
 
-            OperationQueue.main.addOperation() { [weak self] in
+            Queue.main.async { [weak self] in
                 self?.view?.toggleButton(isEnabled: isButtonEnabled)
             }
         }
@@ -101,8 +104,9 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
                 if let resultString = result?.bestTranscription.formattedString {
                     self.view?.setTextResult(resultString)
 
-                    if let lastWord = resultString.split(separator: " ").last {
-                        self.view?.city = String(lastWord)
+                    if let range = resultString.range(of: self.kSeparatorWord) {
+                        let cityName = resultString[range.upperBound...]
+                        self.view?.city = String(cityName)
                     }
                 }
                 isFinal = (result?.isFinal)!

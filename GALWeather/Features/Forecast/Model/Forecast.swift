@@ -27,7 +27,7 @@ struct Condition: Decodable {
     func iconURL() -> URL? {
         guard !icon.isEmpty else { return nil }
 
-        let validURLString = String(icon.dropFirst(2)) // the api return always icon with 2 slashes
+        let validURLString = String("https:\(icon)") // api return url with 2 slashes in the begenning.. so we will append https: Before it as a dirty hack
         let url = URL(string: validURLString) ?? nil
         return url
     }

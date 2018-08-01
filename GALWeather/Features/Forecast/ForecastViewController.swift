@@ -55,8 +55,12 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
 
     private func setupIcon(with url: URL?) {
         guard let url = url else { return }
-        if let data = try? Data(contentsOf: url) {
-            self.tempratureIconImage.image = UIImage(data: data)
+        Queue.background.async {
+            if let data = try? Data(contentsOf: url) {
+                Queue.main.async { [weak self] in
+                    self?.tempratureIconImage.image = UIImage(data: data)
+                }
+            }
         }
     }
 

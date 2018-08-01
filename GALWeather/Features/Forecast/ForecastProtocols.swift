@@ -12,6 +12,7 @@ import MHNetwork
 //MARK: Presenter -
 protocol ForecastPresenterProtocol: class {
     func getForecast(for city: String)
+    func speechRequestAuthorization()
 }
 
 //MARK: Interactor -
@@ -23,6 +24,6 @@ protocol ForecastInteractorProtocol: class {
 
 //MARK: View -
 protocol ForecastViewProtocol: class {
-
-  var presenter: ForecastPresenterProtocol?  { get set }
+    var presenter: ForecastPresenterProtocol?  { get set }
+    func toggleButton(isEnabled: Bool)
 }

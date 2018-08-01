@@ -121,6 +121,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A5CE299E21121AE600DE9030 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A5CE299F21121F4200DE9030 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		F3375A89C1819856A384FB5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */,
+				FDC7B1F52111F3C0005FF0D8 /* Helpers */,
+				FDC7B2022111FD0F005FF0D8 /* Bases */,
+				A5CE299E21121AE600DE9030 /* Managers */,
 				FDC7B1DE2111EAC5005FF0D8 /* Features */,
 				FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */,
 				FDC7B2002111FCF4005FF0D8 /* Main.storyboard */,
@@ -190,9 +207,6 @@
 		FDC7B1DE2111EAC5005FF0D8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FDC7B1F52111F3C0005FF0D8 /* Helpers */,
-				FDC7B2022111FD0F005FF0D8 /* Bases */,
-				FDC7B1EC2111EBA2005FF0D8 /* Managers */,
 				FDC7B1DF2111EAD4005FF0D8 /* Forecast */,
 			);
 			path = Features;
@@ -213,13 +227,6 @@
 			path = Forecast;
 			sourceTree = "<group>";
 		};
-		FDC7B1EC2111EBA2005FF0D8 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		FDC7B1F22111F234005FF0D8 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +239,7 @@
 		FDC7B1F52111F3C0005FF0D8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A5CE299F21121F4200DE9030 /* Util */,
 				FDC7B1F82111F44E005FF0D8 /* Extensions */,
 				FDC7B1F62111F3CB005FF0D8 /* Constants.swift */,
 			);

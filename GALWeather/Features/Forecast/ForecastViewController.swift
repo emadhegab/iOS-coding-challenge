@@ -8,14 +8,34 @@
 
 
 import UIKit
+import Speech
 
 class ForecastViewController: UIViewController, ForecastViewProtocol {
 
+    @IBOutlet weak var micButton: UIButton!
     var presenter: ForecastPresenterProtocol?
-
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.getForecast(for: "Berlin")
+        setupView()
+        presenter?.speechRequestAuthorization()
+//        presenter?.getForecast(for: "Berlin")
     }
 
+   
+
+    func toggleButton(isEnabled: Bool) {
+        micButton.isEnabled = isEnabled
+    }
+
+    private func setupView() {
+        micButton.layer.cornerRadius = micButton.frame.width / 2
+        micButton.clipsToBounds = true
+
+        micButton.isEnabled = false
+    }
+
+    @IBAction func micButtonPressed(_ sender: Any) {
+
+    }
 }

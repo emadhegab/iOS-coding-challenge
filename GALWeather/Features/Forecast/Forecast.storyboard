@@ -24,19 +24,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCQ-Xr-4Ob">
+                                <rect key="frame" x="118" y="263.5" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="J69-9d-CBh"/>
+                                    <constraint firstAttribute="width" constant="140" id="OXu-DZ-JaY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Press To Ask!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="micButtonPressed:" destination="bKC-m0-lgQ" eventType="touchUpInside" id="7qi-N3-uae"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rlr-pK-884" firstAttribute="top" secondItem="TDA-x2-POr" secondAttribute="top" constant="60" id="GFi-S7-GE2"/>
                             <constraint firstItem="rlr-pK-884" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Hm6-xv-r4o"/>
+                            <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerY" secondItem="Wdr-k2-WpM" secondAttribute="centerY" id="JAe-ix-eOX"/>
+                            <constraint firstItem="TCQ-Xr-4Ob" firstAttribute="centerX" secondItem="Wdr-k2-WpM" secondAttribute="centerX" id="Kxx-lI-P4R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDA-x2-POr"/>
                     </view>
                     <navigationItem key="navigationItem" id="hDL-kr-v8x"/>
+                    <connections>
+                        <outlet property="micButton" destination="TCQ-Xr-4Ob" id="eFG-X9-nHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG6-zZ-D70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="-7"/>
+            <point key="canvasLocation" x="245.59999999999999" y="-7.6461769115442282"/>
         </scene>
     </scenes>
 </document>

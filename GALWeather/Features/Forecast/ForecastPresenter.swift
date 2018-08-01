@@ -8,12 +8,15 @@
 
 
 import UIKit
+import Speech
 
 class ForecastPresenter: ForecastPresenterProtocol {
 
 
     weak private var view: ForecastViewProtocol?
     var interactor: ForecastInteractorProtocol?
+
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
 
     init(interface: ForecastViewProtocol, interactor: ForecastInteractorProtocol?) {
         self.view = interface
@@ -27,4 +30,32 @@ class ForecastPresenter: ForecastPresenterProtocol {
             print(error)
         })
     }
+
+    func speechRequestAuthorization() {
+
+        SFSpeechRecognizer.requestAuthorization { [weak self] (authStatus) in
+
+            var isButtonEnabled = false
+
+            switch authStatus {
+            case .authorized:
+                isButtonEnabled = true
+
+            case .denied:
+                isButtonEnabled = false
+                print("User denied access to speech recognition")
+
+            case .restricted:
+                isButtonEnabled = false
+                print("Speech recognition restricted on this device")
+
+            case .notDetermined:
+                isButtonEnabled = false
+                print("Speech recognition not yet authorized")
+            }
+
+            self?.view?.toggleButton(isEnabled: isButtonEnabled)
+        }
+    }
+
 }

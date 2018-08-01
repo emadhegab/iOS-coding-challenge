@@ -17,18 +17,11 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
     @IBOutlet weak var speechResultLabel: UILabel!
 
     var presenter: ForecastPresenterProtocol?
-
+    var city: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         presenter?.speechRequestAuthorization()
-//        presenter?.getForecast(for: "Berlin")
-    }
-
-
-    func startRecording() {
-        self.presenter?.startRecording()
-
     }
 
     func setTextResult(_ text: String) {
@@ -36,7 +29,12 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
     }
 
     func setButtonText(_ text: String) {
+
         micButton.setTitle(text, for: .normal)
+    }
+
+    func callWeatherWithCity() {
+        presenter?.getForecast(for: self.city)
     }
 
     func toggleButton(isEnabled: Bool) {
@@ -52,7 +50,11 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
         micButton.isEnabled = false
     }
 
+    func setWeatherData(forecast: Forecast) {
+        
+    }
+
     @IBAction func micButtonPressed(_ sender: Any) {
-        startRecording()
+        self.presenter?.startRecording()
     }
 }

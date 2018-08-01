@@ -26,7 +26,10 @@ protocol ForecastInteractorProtocol: class {
 //MARK: View -
 protocol ForecastViewProtocol: class {
     var presenter: ForecastPresenterProtocol?  { get set }
+    var city: String { get set }
+    func setWeatherData(forecast: Forecast)
     func toggleButton(isEnabled: Bool)
     func setTextResult(_ text: String)
     func setButtonText(_ text: String)
+    func callWeatherWithCity()
 }

@@ -73,13 +73,12 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             audioEngine.stop()
             recognitionRequest?.endAudio()
             view?.toggleButton(isEnabled: false)
-            view?.setButtonText("Start Recording")
+            view?.setButtonText("Press To Speak!")
+            view?.callWeatherWithCity()
         } else {
             record()
-            view?.setButtonText("Stop Recording")
+            view?.setButtonText("Stop Speaking")
         }
-
-
     }
 
     fileprivate func record() {
@@ -99,9 +98,12 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             if result != nil {
                 if let resultString = result?.bestTranscription.formattedString {
                     self.view?.setTextResult(resultString)
+
+                    if let lastWord = resultString.split(separator: " ").last {
+                        self.view?.city = String(lastWord)
+                    }
                 }
                 isFinal = (result?.isFinal)!
-                print(isFinal)
             }
 
             if error != nil || isFinal {

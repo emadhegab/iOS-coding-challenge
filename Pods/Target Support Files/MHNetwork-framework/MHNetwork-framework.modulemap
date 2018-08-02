@@ -1,5 +1,5 @@
 framework module MHNetwork {
-  umbrella header "MHNetwork-umbrella.h"
+  umbrella header "MHNetwork-framework-umbrella.h"
 
   export *
   module * { export * }

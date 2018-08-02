@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14295.6" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14234.1"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GALWeatherWatchOS" customModuleProvider="target">
+                    <items>
+                        <button alignment="center" backgroundImage="mic" id="6Z1-XB-vjb">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <action selector="micButtonPressed" destination="AgC-eL-Hgc" id="GUj-oC-dvC"/>
+                            </connections>
+                        </button>
+                        <label width="1" alignment="left" textAlignment="center" id="ep8-jP-wqL"/>
+                        <group width="1" alignment="left" id="eIV-Vs-JDW">
+                            <items>
+                                <imageView alignment="left" id="hQ8-RZ-lTS"/>
+                                <label width="0.5" height="37" alignment="right" textAlignment="left" id="foC-ob-aac">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label width="1" alignment="left" textAlignment="center" id="Zz5-DD-n2g"/>
+                    </items>
+                    <connections>
+                        <outlet property="conditionLabel" destination="Zz5-DD-n2g" id="ojO-1Y-lqo"/>
+                        <outlet property="iconImageView" destination="hQ8-RZ-lTS" id="SjL-lk-uHV"/>
+                        <outlet property="speechResultLabel" destination="ep8-jP-wqL" id="Myu-Oj-9ub"/>
+                        <outlet property="tempLabel" destination="foC-ob-aac" id="LHc-FV-bE2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>

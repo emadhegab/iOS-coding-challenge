@@ -1,26 +1,20 @@
-## GALWeather:
+# iOS Coding Challenge
+We want to know how you write **code** - we don't care about coding challenges where you have to reimplement the HTTP protocol by using the bare basics, we want to know how you can use the existing libraries to solve the problems that we have to solve.
 
-a new smart way to get your weather updates
+Your task is to create a very small iOS application (written in Swift) which will listen to a voice of the user and will tell them the current weather information when asked for. It's up to you to decide how exactly you want to approach this challenge - do you want to use the native iOS SDKs for voice recognition, use offline voice recognition for keywords (e.g. PocketSphinx) or another online service with conversational capabilities (e.g. api.ai, Microsoft LUIS, etc.). You can also choose whichever weather service you want.
 
-#### Network:
-the network manager is depend on my Pod called [MHNetwork](http://github.com/emadhegab/MHNetwork) it's a simple network manager I created couple of weeks ago to avoid big fat singleton Network managers and be more free and SOLID in creating the network task.
+## What we'll look at
+- Structure of the code - how you use controllers, services, views. Keep it clean and reusable.
+- Code formatting, included unit and UI tests.
+- Using external APIs is cool, but you have to make sure the app will support errors if the API is down.
+- Readme - we don't need documentation, but a small file explaining how to run the project will be useful.
+- Overall user experience in the application.
 
-#### Architecture:
-   The architecture in the app is based on [VIPER](https://www.objc.io/issues/13-architecture/viper/) architecture.. it's a little Lego like architecture.. but yet so flexible and easy to maintain .. after couple of days of using it you can easily know where the bug is coming in your code. based on my experience with it for 3 years.. the maintainability is higher that ever and Viper teams always faster than others.
+## Time limit
+It should take you between 4 to 8 hours to finish this task. If it takes you longer, it's okay to leave TODOs in the code, just provide an explanation what you would still finish there.
 
-### Usage:
-  `iPhone:` Press the button and say the query .. just make sure to have one of this words before `["in", "at", "near", "of"]` `({City name})` at the end of the sentence other wise the backend will give you the closest match to the last words or will give you nothing
+After sending the challenge we'll wait 2 weeks to hear back from you. Feel free to ask us for any clarification if you need it.
 
-  `WatchOS` press on the mic icon and choose from the suggestions (static 2 cities) or press the blue mic in there and dictate your request just like iPhone.
+## Process
+When you're ready, please fork this repository and start writing code in your fork. You'll get extra points for committing often in small chunks, so we'll see the process of how you created the application.
 
-  `Today Widget` go to today screen on your iPhone or force touch the app icon.. it's a short cut to open the dictation directly from outside 
-
-
-
-
-
-  ### TODOs:
-    -[x] apple watch integration
-
-    -[x] Today Extension integration
-    -[ ] SiriKit integration (should wait till I have access to short cut app (still in alpha and not much developers have access to it yet))

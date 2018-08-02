@@ -1,4 +1,4 @@
-framework module Pods_GALWeatherTests {
+module Pods_GALWeatherTests {
   umbrella header "Pods-GALWeatherTests-umbrella.h"
 
   export *

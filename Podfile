@@ -17,11 +17,13 @@ end
 target 'GALWeatherTests' do
     inherit! :search_paths
     # Pods for testing
+   shared_pods
 end
 
 target 'GALWeatherUITests' do
     inherit! :search_paths
     # Pods for testing
+    shared_pods
 end
 
 target 'GALWeatherWatchOS Extension' do

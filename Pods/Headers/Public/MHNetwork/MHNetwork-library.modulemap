@@ -1,6 +1,0 @@
-module MHNetwork {
-  umbrella header "MHNetwork-library-umbrella.h"
-
-  export *
-  module * { export * }
-}

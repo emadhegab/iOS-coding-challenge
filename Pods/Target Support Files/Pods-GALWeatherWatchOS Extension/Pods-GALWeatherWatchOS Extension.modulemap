@@ -1,0 +1,6 @@
+module Pods_GALWeatherWatchOS_Extension {
+  umbrella header "Pods-GALWeatherWatchOS Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

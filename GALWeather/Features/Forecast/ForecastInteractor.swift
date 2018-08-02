@@ -15,7 +15,7 @@ class ForecastInteractor: ForecastInteractorProtocol {
 
     func getForecast(for city: String, onComplete: @escaping (Forecast) -> Void, onError: @escaping (ErrorItem) -> Void) {
 
-        let environment = Environment(host: Bundle.main.apiBaseURL)
+        let environment = Environment(host: Constants.BASE_URL)
         let networkDispatcher = NetworkDispatcher(environment: environment, session: URLSession(configuration: .default))
         let forecastTask = ForecastTask<Forecast>(city: city)
         forecastTask.exeute(in: networkDispatcher, completed: onComplete, onError: onError)

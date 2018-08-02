@@ -19,5 +19,5 @@ the network manager is depend on my Pod called [MHNetwork](http://github.com/ema
 
   ### TODOs:
     -[ ] apple watch integration
-    <del> -[ ]SiriKit integration<del>
+    -[ ]SiriKit integration
     -[x] Today Extension integration

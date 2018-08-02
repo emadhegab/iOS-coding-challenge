@@ -24,10 +24,12 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
     var presenter: ForecastPresenterProtocol?
     var city: String = ""
     var tempSystem: TempSystem = .celsius
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         presenter?.speechRequestAuthorization()
+        notificationChecker()
     }
 
     func setTextResult(_ text: String) {
@@ -46,6 +48,10 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
     func toggleButton(isEnabled: Bool) {
         micButton.isEnabled = isEnabled
         micButton.backgroundColor = isEnabled ? UIColor(red: 224 / 255, green: 166 / 255, blue: 35 / 255, alpha: 1) :  UIColor.lightGray
+    }
+
+    private func notificationChecker() {
+        NotificationCenter.default.addObserver(self, selector: #selector(micButtonPressed(_:)), name: Constants.DEEP_LINK_NOTIFICATION.name, object: nil)
     }
 
     private func setupView() {
@@ -98,5 +104,10 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
 
     @IBAction func micButtonPressed(_ sender: Any) {
         self.presenter?.startRecording()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Constants.DEEP_LINK_NOTIFICATION.name, object: nil)
+
     }
 }

@@ -43,6 +43,17 @@
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Your microphone will be used to record your speech when you press the &quot;Press To Speak!&quot; button.</string>
+	<key>UIApplicationShortcutWidget</key>
+	<string>com.germanautolabs.GALWeather.GALWeatherWidget</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>GALWeather</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Speech recognition will be used to determine your words </string>
 </dict>

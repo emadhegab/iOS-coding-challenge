@@ -34,5 +34,4 @@ protocol ForecastViewProtocol: class {
     func toggleButton(isEnabled: Bool)
     func setTextResult(_ text: String)
     func setButtonText(_ text: String)
-    func callWeatherWithCity()
 }

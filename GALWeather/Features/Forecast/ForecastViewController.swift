@@ -41,10 +41,6 @@ class ForecastViewController: UIViewController, ForecastViewProtocol {
         micButton.setTitle(text, for: .normal)
     }
 
-    func callWeatherWithCity() {
-        presenter?.getForecast(for: self.city)
-    }
-
     func toggleButton(isEnabled: Bool) {
         micButton.isEnabled = isEnabled
         micButton.backgroundColor = isEnabled ? UIColor(red: 224 / 255, green: 166 / 255, blue: 35 / 255, alpha: 1) :  UIColor.lightGray

@@ -20,7 +20,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
-
+    private var lastRecordedCity: String = ""
     init(interface: ForecastViewProtocol, interactor: ForecastInteractorProtocol?) {
         super.init()
         self.view = interface
@@ -79,7 +79,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             recognitionRequest?.endAudio()
             view?.toggleButton(isEnabled: false)
             view?.setButtonText("Press To Speak!")
-            view?.callWeatherWithCity()
+            getForecast(for: self.lastRecordedCity)
         } else {
             record()
             view?.setButtonText("Stop Speaking")
@@ -91,9 +91,9 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
 
         resetRecognitionTask()
 
-        audioSessionCreating()
+        createAudioSession()
 
-        recognitionRequestCreating()
+        createRecognitionRequest()
 
         let inputNode = audioEngine.inputNode
 
@@ -108,12 +108,12 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
 
         do {
             try audioEngine.start()
-        } catch {
-            print("audioEngine couldn't start because of an error.")
+        } catch let error {
+            print("audioEngine couldn't start because of an error: \(error)")
         }
     }
 
-    fileprivate func audioSessionCreating() {
+    fileprivate func createAudioSession() {
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSessionCategoryRecord)
@@ -124,7 +124,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
         }
     }
 
-    fileprivate func recognitionRequestCreating() {
+    fileprivate func createRecognitionRequest() {
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
 
         guard let recognitionRequest = recognitionRequest else {
@@ -165,7 +165,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             if result != nil {
                 if let resultString = result?.bestTranscription.formattedString {
                     self.view?.setTextResult(resultString)
-                    self.view?.city = String((self.interactor?.getCityName(resultString)) ?? "")
+                    self.lastRecordedCity = String((self.interactor?.getCityName(resultString)) ?? "")
                 }
                 isFinal = (result?.isFinal)!
             }

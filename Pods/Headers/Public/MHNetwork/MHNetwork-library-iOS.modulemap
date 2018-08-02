@@ -1,0 +1,7 @@
+module MHNetwork {
+  umbrella header "MHNetwork-library-iOS-umbrella.h"
+  exclude header "MHNetwork-library-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

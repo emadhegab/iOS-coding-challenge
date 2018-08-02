@@ -909,7 +909,6 @@
 		FD1CDC3521130FBD00B27BC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XF42ZHPGY;
@@ -930,7 +929,6 @@
 		FD1CDC3621130FBD00B27BC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XF42ZHPGY;
@@ -1114,7 +1112,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 62E080062D548898A7D39E38 /* Pods-GALWeather.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XF42ZHPGY;
@@ -1135,7 +1132,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A23EE1C722C750C5F50D856 /* Pods-GALWeather.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XF42ZHPGY;
@@ -1156,7 +1152,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76A27E11E7E9DD5EEE8E05F4 /* Pods-GALWeatherTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GALWeatherTests/Info.plist;
@@ -1177,7 +1172,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 137E92C0D0B490F085D41916 /* Pods-GALWeatherTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GALWeatherTests/Info.plist;
@@ -1198,7 +1192,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1218,7 +1211,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

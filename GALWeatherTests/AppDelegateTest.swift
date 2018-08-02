@@ -53,4 +53,9 @@ class AppDelegateTests: XCTestCase {
         XCTAssertTrue(appDelegate.application(UIApplication.shared, didFinishLaunchingWithOptions: nil), "should return true from didFinishLaunchingWithOptions")
     }
 
+    func testOpenURLReturnTrue() {
+        XCTAssertTrue(appDelegate.application(UIApplication.shared, open: URL(string: "GALWeather://")!))
+
+    }
+
 }

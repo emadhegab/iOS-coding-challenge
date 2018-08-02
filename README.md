@@ -11,7 +11,9 @@ the network manager is depend on my Pod called [MHNetwork](http://github.com/ema
 ### Usage:
   `iPhone:` Press the button and say the query .. just make sure to have one of this words before `["in", "at", "near", "of"]` `({City name})` at the end of the sentence other wise the backend will give you the closest match to the last words or will give you nothing
 
-  `WatchOS` will be determined
+  `WatchOS` press on the mic icon and choose from the suggestions (static 2 cities) or press the blue mic in there and dictate your request just like iPhone.
+
+  `Today Widget` go to today screen on your iPhone or force touch the app icon.. it's a short cut to open the dictation directly from outside 
 
 
 
@@ -21,4 +23,4 @@ the network manager is depend on my Pod called [MHNetwork](http://github.com/ema
     -[x] apple watch integration
 
     -[x] Today Extension integration
-    -[ ] SiriKit integration
+    -[ ] SiriKit integration (should wait till I have access to short cut app (still in alpha and not much developers have access to it yet))

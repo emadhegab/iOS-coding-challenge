@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24848A20A908F736A7CD3A07 /* libPods-GALWeatherUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751A7684748F417888CAE942 /* libPods-GALWeatherUITests.a */; };
 		5265DF907E3B9F14666AD190 /* Pods_GALWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1CDC402113145A00B27BC5 /* Pods_GALWeather.framework */; };
 		906E0CE8C4B574F31BFE2260 /* libPods-GALWeatherWatchOS Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC24908E66E5EA2F9F6BCC31 /* libPods-GALWeatherWatchOS Extension.a */; };
 		9E4A4E3E14BB090EDC93A2E6 /* libPods-GALWeatherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FBFE4CF169EB9E4773EDE /* libPods-GALWeatherTests.a */; };
@@ -35,7 +34,6 @@
 		FDC7B1B82111EAA3005FF0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */; };
 		FDC7B1BB2111EAA3005FF0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */; };
 		FDC7B1C62111EAA4005FF0D8 /* GALWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */; };
-		FDC7B1D12111EAA4005FF0D8 /* GALWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */; };
 		FDC7B1E62111EB6F005FF0D8 /* ForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */; };
 		FDC7B1E72111EB6F005FF0D8 /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */; };
 		FDC7B1E82111EB6F005FF0D8 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */; };
@@ -73,13 +71,6 @@
 			remoteInfo = GALWeatherWatchOS;
 		};
 		FDC7B1C22111EAA4005FF0D8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDC7B1A52111EAA1005FF0D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDC7B1AC2111EAA1005FF0D8;
-			remoteInfo = GALWeather;
-		};
-		FDC7B1CD2111EAA4005FF0D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDC7B1A52111EAA1005FF0D8 /* Project object */;
 			proxyType = 1;
@@ -163,9 +154,6 @@
 		FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GALWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALWeatherTests.swift; sourceTree = "<group>"; };
 		FDC7B1C72111EAA4005FF0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GALWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALWeatherUITests.swift; sourceTree = "<group>"; };
-		FDC7B1D22111EAA4005FF0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC7B1E02111EB6F005FF0D8 /* ForecastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastPresenter.swift; sourceTree = "<group>"; };
 		FDC7B1E12111EB6F005FF0D8 /* ForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
 		FDC7B1E22111EB6F005FF0D8 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
@@ -218,14 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4A4E3E14BB090EDC93A2E6 /* libPods-GALWeatherTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDC7B1C92111EAA4005FF0D8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24848A20A908F736A7CD3A07 /* libPods-GALWeatherUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +284,6 @@
 			children = (
 				FDC7B1AF2111EAA1005FF0D8 /* GALWeather */,
 				FDC7B1C42111EAA4005FF0D8 /* GALWeatherTests */,
-				FDC7B1CF2111EAA4005FF0D8 /* GALWeatherUITests */,
 				FD1CDC042113004B00B27BC5 /* GALWeatherWidget */,
 				FD1CDC1821130FBA00B27BC5 /* GALWeatherWatchOS */,
 				FD1CDC2721130FBD00B27BC5 /* GALWeatherWatchOS Extension */,
@@ -319,7 +298,6 @@
 			children = (
 				FDC7B1AD2111EAA1005FF0D8 /* GALWeather.app */,
 				FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */,
-				FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */,
 				FD1CDC012113004B00B27BC5 /* GALWeatherWidget.appex */,
 				FD1CDC1721130FBA00B27BC5 /* GALWeatherWatchOS.app */,
 				FD1CDC2321130FBC00B27BC5 /* GALWeatherWatchOS Extension.appex */,
@@ -351,15 +329,6 @@
 				FDC7B1C72111EAA4005FF0D8 /* Info.plist */,
 			);
 			path = GALWeatherTests;
-			sourceTree = "<group>";
-		};
-		FDC7B1CF2111EAA4005FF0D8 /* GALWeatherUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FDC7B1D02111EAA4005FF0D8 /* GALWeatherUITests.swift */,
-				FDC7B1D22111EAA4005FF0D8 /* Info.plist */,
-			);
-			path = GALWeatherUITests;
 			sourceTree = "<group>";
 		};
 		FDC7B1DE2111EAC5005FF0D8 /* Features */ = {
@@ -525,25 +494,6 @@
 			productReference = FDC7B1C12111EAA4005FF0D8 /* GALWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FDC7B1CB2111EAA4005FF0D8 /* GALWeatherUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDC7B1DB2111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherUITests" */;
-			buildPhases = (
-				87B22955B719F8BBA7D2A701 /* [CP] Check Pods Manifest.lock */,
-				FDC7B1C82111EAA4005FF0D8 /* Sources */,
-				FDC7B1C92111EAA4005FF0D8 /* Frameworks */,
-				FDC7B1CA2111EAA4005FF0D8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FDC7B1CE2111EAA4005FF0D8 /* PBXTargetDependency */,
-			);
-			name = GALWeatherUITests;
-			productName = GALWeatherUITests;
-			productReference = FDC7B1CC2111EAA4005FF0D8 /* GALWeatherUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -570,10 +520,6 @@
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = FDC7B1AC2111EAA1005FF0D8;
 					};
-					FDC7B1CB2111EAA4005FF0D8 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = FDC7B1AC2111EAA1005FF0D8;
-					};
 				};
 			};
 			buildConfigurationList = FDC7B1A82111EAA1005FF0D8 /* Build configuration list for PBXProject "GALWeather" */;
@@ -591,7 +537,6 @@
 			targets = (
 				FDC7B1AC2111EAA1005FF0D8 /* GALWeather */,
 				FDC7B1C02111EAA4005FF0D8 /* GALWeatherTests */,
-				FDC7B1CB2111EAA4005FF0D8 /* GALWeatherUITests */,
 				FD1CDC002113004B00B27BC5 /* GALWeatherWidget */,
 				FD1CDC1621130FBA00B27BC5 /* GALWeatherWatchOS */,
 				FD1CDC2221130FBC00B27BC5 /* GALWeatherWatchOS Extension */,
@@ -636,13 +581,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDC7B1BF2111EAA4005FF0D8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDC7B1CA2111EAA4005FF0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -724,24 +662,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GALWeather/Pods-GALWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87B22955B719F8BBA7D2A701 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GALWeatherUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -797,14 +717,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDC7B1C82111EAA4005FF0D8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDC7B1D12111EAA4005FF0D8 /* GALWeatherUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -827,11 +739,6 @@
 			isa = PBXTargetDependency;
 			target = FDC7B1AC2111EAA1005FF0D8 /* GALWeather */;
 			targetProxy = FDC7B1C22111EAA4005FF0D8 /* PBXContainerItemProxy */;
-		};
-		FDC7B1CE2111EAA4005FF0D8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDC7B1AC2111EAA1005FF0D8 /* GALWeather */;
-			targetProxy = FDC7B1CD2111EAA4005FF0D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1188,44 +1095,6 @@
 			};
 			name = Release;
 		};
-		FDC7B1DC2111EAA4005FF0D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GALWeather;
-			};
-			name = Debug;
-		};
-		FDC7B1DD2111EAA4005FF0D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GALWeatherUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.germanautolabs.GALWeatherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GALWeather;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1279,15 +1148,6 @@
 			buildConfigurations = (
 				FDC7B1D92111EAA4005FF0D8 /* Debug */,
 				FDC7B1DA2111EAA4005FF0D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDC7B1DB2111EAA4005FF0D8 /* Build configuration list for PBXNativeTarget "GALWeatherUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FDC7B1DC2111EAA4005FF0D8 /* Debug */,
-				FDC7B1DD2111EAA4005FF0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

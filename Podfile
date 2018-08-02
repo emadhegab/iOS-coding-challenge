@@ -20,12 +20,6 @@ target 'GALWeatherTests' do
    shared_pods
 end
 
-target 'GALWeatherUITests' do
-    inherit! :search_paths
-    # Pods for testing
-    shared_pods
-end
-
 target 'GALWeatherWatchOS Extension' do
     platform :watchos, '2.0'
     shared_pods

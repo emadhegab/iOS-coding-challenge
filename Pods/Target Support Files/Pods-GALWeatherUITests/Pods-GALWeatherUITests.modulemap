@@ -1,6 +1,0 @@
-module Pods_GALWeatherUITests {
-  umbrella header "Pods-GALWeatherUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

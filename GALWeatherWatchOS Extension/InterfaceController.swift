@@ -23,12 +23,6 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-//        interactor.getForecast(for: "Berlin", onComplete: { (forecast) in
-//            print(forecast)
-//        }) { (error) in
-// 
-//        }
-
 
     }
     
@@ -43,6 +37,33 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func micButtonPressed() {
-        
+        self.presentTextInputController(withSuggestions: ["weather in Berlin", "weather in Cairo"], allowedInputMode: .plain) { [weak self] (result) in
+            if let firstResult = result?.first as? String {
+                let city = String((self?.interactor.getCityName(firstResult)) ?? "")
+                self?.interactor.getForecast(for: city, onComplete: { [weak self] (forecast) in
+                    self?.setupData(with: forecast)
+                }) { (error) in
+
+                }
+            }
+        }
+    }
+
+    private func setupData(with forecast: Forecast) {
+
+        setupIcon(with: forecast.current.condition.iconURL())
+        tempLabel.setText("\(forecast.current.tempC) °C")
+        conditionLabel.setText(forecast.current.condition.text)
+    }
+
+    private func setupIcon(with url: URL?) {
+        guard let url = url else { return }
+        Queue.background.async {
+            if let data = try? Data(contentsOf: url) {
+                Queue.main.async { [weak self] in
+                    self?.iconImageView.setImageData(data)
+                }
+            }
+        }
     }
 }

@@ -13,21 +13,23 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GALWeatherWatchOS" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Weather Me!" id="6Z1-XB-vjb">
+                        <button alignment="center" backgroundImage="mic" id="6Z1-XB-vjb">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
                             <connections>
                                 <action selector="micButtonPressed" destination="AgC-eL-Hgc" id="GUj-oC-dvC"/>
                             </connections>
                         </button>
-                        <label width="1" alignment="left" text="Label" textAlignment="center" id="ep8-jP-wqL"/>
+                        <label width="1" alignment="left" textAlignment="center" id="ep8-jP-wqL"/>
                         <group width="1" alignment="left" id="eIV-Vs-JDW">
                             <items>
-                                <imageView width="0.5" alignment="left" id="hQ8-RZ-lTS"/>
-                                <label width="0.5" height="37" alignment="right" text="Label" textAlignment="center" id="foC-ob-aac">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                <imageView alignment="left" id="hQ8-RZ-lTS"/>
+                                <label width="0.5" height="37" alignment="right" textAlignment="left" id="foC-ob-aac">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
                                 </label>
                             </items>
                         </group>
-                        <label width="1" alignment="left" text="Label" textAlignment="center" id="Zz5-DD-n2g"/>
+                        <label width="1" alignment="left" textAlignment="center" id="Zz5-DD-n2g"/>
                     </items>
                     <connections>
                         <outlet property="conditionLabel" destination="Zz5-DD-n2g" id="ojO-1Y-lqo"/>

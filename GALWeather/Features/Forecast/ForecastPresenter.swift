@@ -12,8 +12,6 @@ import Speech
 
 class ForecastPresenter: NSObject, ForecastPresenterProtocol {
 
-    let kSeparatorWord: String = "in "
-
     weak private var view: ForecastViewProtocol?
     var forecast: Forecast?
     var interactor: ForecastInteractorProtocol?
@@ -144,12 +142,6 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
         }
     }
 
-    fileprivate func getCityName(_ resultString: String) {
-        if let range = resultString.range(of: self.kSeparatorWord) {
-            let cityName = resultString[range.upperBound...]
-            self.view?.city = String(cityName)
-        }
-    }
 
     fileprivate func handleRecordingStop(_ error: Error?, _ isFinal: Bool, _ inputNode: AVAudioInputNode) {
         if error != nil || isFinal {
@@ -173,8 +165,7 @@ class ForecastPresenter: NSObject, ForecastPresenterProtocol {
             if result != nil {
                 if let resultString = result?.bestTranscription.formattedString {
                     self.view?.setTextResult(resultString)
-
-                    self.getCityName(resultString)
+                    self.view?.city = String((self.interactor?.getCityName(resultString)) ?? "")
                 }
                 isFinal = (result?.isFinal)!
             }

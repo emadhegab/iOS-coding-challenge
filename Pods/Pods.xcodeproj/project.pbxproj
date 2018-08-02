@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,14 +54,14 @@
 
 /* Begin PBXFileReference section */
 		01D0AD7C0B2858195FE39B468B7B18AE /* Pods-GALWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GALWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
-		03046E8C59BE20A504792BC83612A616 /* libMHNetwork-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libMHNetwork-library.a"; path = "libMHNetwork-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03046E8C59BE20A504792BC83612A616 /* libMHNetwork-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMHNetwork-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C7C1EB23E51CC16C1536A1EC8A730 /* Pods-GALWeather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GALWeather-resources.sh"; sourceTree = "<group>"; };
 		0D172CA2B84739D488FB5D9A057D83EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		272EFC151B7DEFCAB16DAA3F28480BA1 /* libPods-GALWeatherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GALWeatherTests.a"; path = "libPods-GALWeatherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		272EFC151B7DEFCAB16DAA3F28480BA1 /* libPods-GALWeatherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GALWeatherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2193D1E0F2DD6BE24A7BBEB630A190 /* Pods-GALWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GALWeather-dummy.m"; sourceTree = "<group>"; };
 		3223F85ED7B21FDBACBBC3567522150B /* Pods-GALWeatherWatchOS Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GALWeatherWatchOS Extension-umbrella.h"; sourceTree = "<group>"; };
 		38670C313CEA7E9E0AC866AB2BDC8CA0 /* Pods-GALWeatherUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GALWeatherUITests-dummy.m"; sourceTree = "<group>"; };
-		39C3B59B553BD0275D40928E88925C75 /* MHNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MHNetwork.framework; path = "MHNetwork-framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C3B59B553BD0275D40928E88925C75 /* MHNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A86C47F5EAD1A8DBE6321D32353A0BB /* Pods-GALWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GALWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		49258B1D9B8B4ACC6DE565098E7F9DE3 /* StatusCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusCodes.swift; path = MHNetwork/Network/Helpers/StatusCodes.swift; sourceTree = "<group>"; };
 		49E15020DD54EA96989105E736D1ADF8 /* Pods-GALWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GALWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,17 +70,17 @@
 		5CC61DC37948B4CF5C8B765204AB534A /* Pods-GALWeatherUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GALWeatherUITests-resources.sh"; sourceTree = "<group>"; };
 		60B883C2F8D4E32C8B9F888CF8C56AC7 /* MHNetwork-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MHNetwork-library-dummy.m"; path = "../MHNetwork-library/MHNetwork-library-dummy.m"; sourceTree = "<group>"; };
 		624CB9398A511C1740E12D112A9961A9 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkDispatcher.swift; path = MHNetwork/Network/NetworkDispatcher.swift; sourceTree = "<group>"; };
-		6BBEB1B2513BC0EBFC8D3C66FDD56A14 /* libPods-GALWeatherUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GALWeatherUITests.a"; path = "libPods-GALWeatherUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBEB1B2513BC0EBFC8D3C66FDD56A14 /* libPods-GALWeatherUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GALWeatherUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709182B1F654DFD22159A772171D5FAC /* MHNetwork-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MHNetwork-framework-dummy.m"; sourceTree = "<group>"; };
 		720AD901301A4AF2D5A9D587DA1BFFD4 /* Pods-GALWeatherWatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GALWeatherWatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		721261C551F967265991FC3B30A47814 /* Pods_GALWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GALWeather.framework; path = "Pods-GALWeather.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		721261C551F967265991FC3B30A47814 /* Pods_GALWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GALWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		761351164E76761D94D6043148105964 /* MHNetwork-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MHNetwork-library-prefix.pch"; path = "../MHNetwork-library/MHNetwork-library-prefix.pch"; sourceTree = "<group>"; };
 		775DFC1F9776B334E43A7367C910F52E /* Pods-GALWeatherWatchOS Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GALWeatherWatchOS Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		80D7F4964B775DE3CDF9D25F4DB9AB0F /* Pods-GALWeatherWatchOS Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GALWeatherWatchOS Extension-dummy.m"; sourceTree = "<group>"; };
 		840C43F02584FB771FA3B970C3AB4FA9 /* MHNetwork-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MHNetwork-framework.xcconfig"; sourceTree = "<group>"; };
 		867F7C276B75336D68D2DF0C9B852A76 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = MHNetwork/Network/Response.swift; sourceTree = "<group>"; };
 		894D205F4B2A020B9C29435987B564B9 /* Pods-GALWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GALWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95A32B9A61375F1EA855CA3A2B5FC6D6 /* Pods-GALWeather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GALWeather-frameworks.sh"; sourceTree = "<group>"; };
 		97536C9AD177A7362A398AE5FED111C7 /* Pods-GALWeatherTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GALWeatherTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9B392CD40A9CC55FC150ADEF733DD27F /* Pods-GALWeatherTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GALWeatherTests-dummy.m"; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		ACF8DBC2537BA0DD7C8ADE89CF870D58 /* Pods-GALWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GALWeather.modulemap"; sourceTree = "<group>"; };
 		AD43236BE82C7FDB17EA160FBEA8FCBC /* Pods-GALWeatherWatchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GALWeatherWatchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		B13CD7FE04481B1EA16AC376D688B20B /* Pods-GALWeatherUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GALWeatherUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B4E778AF27EA105A0F021ABCA4102966 /* libPods-GALWeatherWatchOS Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GALWeatherWatchOS Extension.a"; path = "libPods-GALWeatherWatchOS Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E778AF27EA105A0F021ABCA4102966 /* libPods-GALWeatherWatchOS Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GALWeatherWatchOS Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD809F7234F0C71A623D28A0241D5752 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDE392FD04D5ABB809CCF669BDAB29FB /* MHNetwork-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "MHNetwork-library.xcconfig"; path = "../MHNetwork-library/MHNetwork-library.xcconfig"; sourceTree = "<group>"; };
 		C20577BF9C1E703B495F7CBF91228F33 /* Pods-GALWeatherTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GALWeatherTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -300,7 +300,6 @@
 				49258B1D9B8B4ACC6DE565098E7F9DE3 /* StatusCodes.swift */,
 				945AC87AF308B92A03D5AC2C6E01ECD6 /* Support Files */,
 			);
-			name = MHNetwork;
 			path = MHNetwork;
 			sourceTree = "<group>";
 		};
@@ -469,7 +468,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -513,7 +512,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MHNetwork/MHNetwork-library.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MHNetwork/MHNetwork-library-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -615,11 +613,7 @@
 				INFOPLIST_FILE = "Target Support Files/MHNetwork-framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MHNetwork-framework/MHNetwork-framework.modulemap";
 				PRODUCT_MODULE_NAME = MHNetwork;
 				PRODUCT_NAME = MHNetwork;
@@ -738,11 +732,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-GALWeather/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GALWeather/Pods-GALWeather.modulemap";
 				OTHER_LDFLAGS = "";
@@ -956,6 +946,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -979,11 +970,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-GALWeather/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GALWeather/Pods-GALWeather.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1045,11 +1032,7 @@
 				INFOPLIST_FILE = "Target Support Files/MHNetwork-framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MHNetwork-framework/MHNetwork-framework.modulemap";
 				PRODUCT_MODULE_NAME = MHNetwork;
 				PRODUCT_NAME = MHNetwork;

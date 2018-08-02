@@ -22,6 +22,8 @@ protocol ForecastInteractorProtocol: class {
 
     var presenter: ForecastPresenterProtocol?  { get set }
     func getForecast(for city: String, onComplete: @escaping (Forecast) -> Void, onError: @escaping (ErrorItem) -> Void)
+
+    func getCityName(_ resultString: String) -> Substring?
 }
 
 //MARK: View -

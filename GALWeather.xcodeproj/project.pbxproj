@@ -11,6 +11,8 @@
 		86B237F332BE031BC059DF1F /* Pods_GALWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74B360370FA47E2BEBF7201 /* Pods_GALWeatherTests.framework */; };
 		A55ED98321123F1800F95678 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55ED98221123F1800F95678 /* Queue.swift */; };
 		AB116674F4AED4BEA570647D /* Pods_GALWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729DAA42B97E2A9125D5A8EE /* Pods_GALWeather.framework */; };
+		FD04E7072112E45B006BACCD /* ForecastInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD04E7062112E45B006BACCD /* ForecastInteractorTests.swift */; };
+		FD04E7092112ECEA006BACCD /* AppDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD04E7082112ECEA006BACCD /* AppDelegateTest.swift */; };
 		FDC7B1B12111EAA1005FF0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */; };
 		FDC7B1B82111EAA3005FF0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */; };
 		FDC7B1BB2111EAA3005FF0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC7B1B92111EAA3005FF0D8 /* LaunchScreen.storyboard */; };
@@ -59,6 +61,8 @@
 		B74B360370FA47E2BEBF7201 /* Pods_GALWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GALWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7C56C11E2EA99E8453413D /* Pods-GALWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherUITests/Pods-GALWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E478063BD0EE496BA47F83DD /* Pods-GALWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GALWeatherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GALWeatherUITests/Pods-GALWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD04E7062112E45B006BACCD /* ForecastInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastInteractorTests.swift; sourceTree = "<group>"; };
+		FD04E7082112ECEA006BACCD /* AppDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTest.swift; sourceTree = "<group>"; };
 		FDC7B1AD2111EAA1005FF0D8 /* GALWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GALWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC7B1B02111EAA1005FF0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC7B1B72111EAA3005FF0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				FDC7B1C52111EAA4005FF0D8 /* GALWeatherTests.swift */,
+				FD04E7082112ECEA006BACCD /* AppDelegateTest.swift */,
+				FD04E7062112E45B006BACCD /* ForecastInteractorTests.swift */,
 				FDC7B1C72111EAA4005FF0D8 /* Info.plist */,
 			);
 			path = GALWeatherTests;
@@ -497,6 +503,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC7B1C62111EAA4005FF0D8 /* GALWeatherTests.swift in Sources */,
+				FD04E7072112E45B006BACCD /* ForecastInteractorTests.swift in Sources */,
+				FD04E7092112ECEA006BACCD /* AppDelegateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

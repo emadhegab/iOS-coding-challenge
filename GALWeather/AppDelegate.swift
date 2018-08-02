@@ -19,5 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    open func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+
+        //delay notification till app launch completly 
+        Queue.main.after(2) {
+            NotificationCenter.default.post(Constants.DEEP_LINK_NOTIFICATION)
+        }
+
+        return true
+    }
+
 }
 
